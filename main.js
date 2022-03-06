@@ -18,12 +18,20 @@ function Add(){
     this.write = (checkBtn, title, content, removeBtn, li, ulTasks) => {
         title.innerHTML = this.name.value;
         content.innerHTML = this.content.value;
+        removeBtn.innerHTML = 'Remove';
+        removeBtn.addEventListener('click', this.delete);
 
         li.appendChild(checkBtn);
         li.appendChild(title);
         li.appendChild(content);
         li.appendChild(removeBtn);
         ulTasks.appendChild(li);
+    }
+
+    this.delete = el => {
+        const element = el.target;
+        const li = element.parentNode;
+        li.parentNode.removeChild(li);
     }
 }
 
