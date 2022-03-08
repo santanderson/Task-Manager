@@ -5,16 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
 <body>
-    <section>
-        <h1>Manage your tasks</h1>
-        <input type="text" class="title">
-        <input type="text" class="content">
-        <button type="button" class="add">Add</button>
-
-        <ul class="tasks"></ul>
-    </section>
+    <main>
+        <div>
+            <h1>Manage Your Tasks</h1>
+            <form>
+                <input type="text" class="title" placeholder="title">
+                <textarea class="content" cols="20" rows="10" wrap="hard" placeholder="task"></textarea>
+                <button type="button" class="add">Add</button>
+            </form>
+    
+            <ul class="tasks"></ul>
+        </div>
+    </main>
 </body>
 </html>
